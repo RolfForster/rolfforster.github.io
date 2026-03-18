@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolf Forster - Autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg2: #0d1117;
+    --bg3: #131920;
+    --text: #d4c9b8;
+    --text-dim: #7a7265;
+    --accent: #b8860b;
+    --accent2: #8b1a1a;
+    --accent-light: #d4a017;
+    --border: rgba(180,160,100,0.15);
+    --glow: rgba(184,134,11,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,10,11,0.95), transparent);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  nav.scrolled {
+    background: rgba(10,10,11,0.97);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Special Elite', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  }
+  .nav-links a:hover { color: #ffffff; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8rem 4rem 4rem;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35) saturate(0.8);
+  }
+  .hero-lines {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(180,160,100,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,160,100,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .hero-content {
+    position: relative;
+    max-width: 700px;
+    animation: heroFadeIn 1.5s ease forwards;
+  }
+  @keyframes heroFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: #e8dfd0;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent-light);
+  }
+  .hero-sub {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: var(--accent2);
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid rgba(139,26,26,0.5);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent);
+  }
+  .btn-primary:hover {
+    background: #a02020;
+    border-color: #a02020;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139,26,26,0.3);
+  }
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    background: transparent;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    color: var(--text);
+    border-color: rgba(180,160,100,0.4);
+    background: rgba(180,160,100,0.05);
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+  }
+
+  /* SECTION */
+  section {
+    padding: 7rem 4rem;
+  }
+  .section-label {
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  /* BOOKS */
+  #buecher { background: #0e1520; }
+  .books-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+  }
+  .book-card {
+    display: flex;
+    gap: 2rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .book-cover {
+    width: 130px;
+    min-width: 130px;
+    height: 195px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .book-cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139,26,26,0.3), rgba(184,134,11,0.1), transparent);
+  }
+  .book-cover-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text);
+    position: relative;
+    padding: 0.5rem;
+    line-height: 1.3;
+  }
+  .book-info { flex: 1; }
+  .book-year {
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #e8dfd0;
+    margin-bottom: 1rem;
+  }
+  .book-desc {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .book-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: gap 0.3s;
+  }
+  .book-link:hover { gap: 0.8rem; }
+  .book-link::after { content: '→'; }
+  .book-badge {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    background: rgba(184,134,11,0.1);
+    border: 1px solid rgba(184,134,11,0.3);
+    color: var(--accent-light);
+    font-family: 'Special Elite', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ÜBER MICH */
+  #ueber-mich {
+    background: #0e1520;
+    position: relative;
+    overflow: hidden;
+  }
+  #ueber-mich::before {
+    content: '"';
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 20rem;
+    color: rgba(180,160,100,0.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+    align-items: start;
+    max-width: 1000px;
+  }
+  .about-portrait {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-portrait::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(10,10,11,0.8));
+  }
+  .portrait-placeholder {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: rgba(212,201,184,0.1);
+  }
+  .about-portrait-caption {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e8dfd0;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+  .about-content p {
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+  }
+  .about-content p strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .about-quote {
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 2.5rem 0;
+    font-style: italic;
+    color: var(--text);
+    font-size: 1.15rem;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    background: var(--bg2);
+    text-align: center;
+  }
+  .newsletter-inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .newsletter-inner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e8dfd0;
+    margin-bottom: 1rem;
+  }
+  .newsletter-inner p {
+    color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    font-style: italic;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 0;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.9rem 1.5rem;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-right: none;
+    color: var(--text);
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .newsletter-form input::placeholder { color: var(--text-dim); }
+  .newsletter-form input:focus { border-color: rgba(180,160,100,0.4); }
+  .newsletter-form button {
+    padding: 0.9rem 1.8rem;
+    background: var(--accent2);
+    color: var(--text);
+    border: 1px solid var(--accent2);
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .newsletter-form button:hover { background: #a02020; }
+
+  /* SOCIAL */
+  #kontakt {
+    background: var(--bg);
+    padding-bottom: 4rem;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 800px;
+  }
+  .contact-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #e8dfd0;
+    margin-bottom: 0.5rem;
+  }
+  .contact-item p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 1rem; }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: 'Special Elite', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .social-link:hover {
+    color: var(--text);
+    border-color: rgba(180,160,100,0.3);
+    background: rgba(180,160,100,0.04);
+    transform: translateX(4px);
+  }
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    font-size: 0.7rem;
+    color: var(--accent);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 4rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+  }
+  footer p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-family: 'Special Elite', serif;
+    letter-spacing: 0.1em;
+  }
+
+  /* SCROLL ANIMATIONS */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 5rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero h1 { font-size: 3.5rem; }
+    .books-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Rolf Forster</a>
+  <ul class="nav-links">
+    <li><a href="#buecher">Bücher</a></li>
+    <li><a href="#ueber-mich">Über mich</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Schweizer Autor</div>
+    <h1>Manche Wunden<br>sieht man <em>nicht.</em></h1>
+    <p class="hero-sub">Eindringliche Geschichten. Ungeschönte Charaktere.</p>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BÜCHER -->
+<section id="buecher">
+  <div class="section-label">Werke</div>
+  <div class="books-grid">
+
+    <div class="book-card" id="book1">
+      <div class="book-cover" style="padding:0;border:none;">
+        <img src="reaper_cover.jpg" alt="Reaper Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="book-info">
+        <div class="book-badge">Erschienen 2025</div>
+        <div class="book-year">November 2025</div>
+        <div class="book-title">Reaper</div>
+        <p class="book-desc">Sam Fletcher war einmal ein fürsorglicher Vater. Dann verlor er alles. Ein 480 Seiten starker psychologischer Thriller über Verwandlung, Schuld und das Schweigen danach.</p>
+        <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="book-link">Jetzt bestellen</a>
+      </div>
+    </div>
+
+    <div class="book-card" id="book2">
+      <div class="book-cover" style="padding:0;border:none;">
+        <img src="schattenkrieg_cover.jpg" alt="Schattenkrieg Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="book-info">
+        <div class="book-badge">Erscheint April 2026</div>
+        <div class="book-year">April 2026</div>
+        <div class="book-title">Schattenkrieg</div>
+        <p class="book-desc">Ukraine, International Legion. Sam Fletcher kehrt zurück – dieses Mal in einen Krieg, der nie endet. Ein Roman über Loyalität, Trauma und die Dinge, die Soldaten nicht erzählen.</p>
+        <span style="font-family:'Special Elite',serif;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);">Erscheint April 2026</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ÜBER MICH -->
+<section id="ueber-mich">
+  <div class="section-label">Der Autor</div>
+  <div class="about-grid">
+    <div class="about-portrait fade-in">
+      <img src="rolf_forster.jpg" alt="Rolf Forster" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="about-portrait-caption">Rolf Forster</div>
+    </div>
+    <div class="about-content fade-in">
+      <h2>Lakonisch.<br>Präzise.<br>Wahr.</h2>
+      <p>Schon immer war ich begeisterter Leser. Im November 2025 habe ich meinen ersten Roman veröffentlicht. In meinen Geschichten verbinde ich <strong>psychologische Tiefe</strong> mit spannungsreicher Handlung und stelle Fragen nach Schuld, Verantwortung und Hoffnung.</p>
+      <div class="about-quote">
+        "Im Zentrum stehen Menschen, die zwischen Entscheidungen für ihre Zukunft und der Last ihrer Vergangenheit stehen."
+      </div>
+      <p><strong>Reaper</strong> ist mein Debütroman – eine Geschichte über Trauma, Familie und die Suche nach einem Weg zurück ins Leben. Ich lebe in der Schweiz.</p>
+      <p>Aktuell arbeite ich an meinem zweiten Roman <strong>Schattenkrieg</strong>, der im April 2026 erscheint.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- KONTAKT / SOCIAL -->
+<section id="kontakt">
+  <div class="section-label">Kontakt</div>
+  <div class="contact-grid">
+    <div class="contact-item fade-in">
+      <h3>Social Media</h3>
+      <p>Folge mir für Updates, Einblicke hinter die Kulissen und Lesertipps.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/forsterbook/" target="_blank" class="social-link">
+          <div class="social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/forsterbook" target="_blank" class="social-link">
+          <div class="social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </div>
+          Facebook
+        </a>
+      </div>
+    </div>
+    <div class="contact-item fade-in">
+      <h3>Presse & Kontakt</h3>
+      <p>Für Presseanfragen, Lesungen oder Kooperationen — schreib mir direkt:</p>
+      <form name="kontakt" method="POST" data-netlify="true" action="/danke" style="margin-top:1rem;">
+        <input type="hidden" name="form-name" value="kontakt">
+        <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
+        <button type="submit" style="width:100%;padding:0.8rem;background:var(--accent2);color:var(--text);border:none;font-family:'Special Elite',serif;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#a02020'" onmouseout="this.style.background='var(--accent2)'">Nachricht senden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Rolf Forster — Alle Rechte vorbehalten</p>
+
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+</script><script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in, .book-card').forEach(el => observer.observe(el));
+
+  // Book cards staggered delay
+  document.querySelectorAll('.book-card').forEach((card, i) => {
+    car
