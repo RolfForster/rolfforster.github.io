@@ -677,8 +677,10 @@
     <div class="contact-item fade-in">
       <h3>Presse & Kontakt</h3>
       <p>Für Presseanfragen, Lesungen oder Kooperationen — schreib mir direkt:</p>
-      <form name="kontakt" method="POST" data-netlify="true" action="/danke" style="margin-top:1rem;">
-        <input type="hidden" name="form-name" value="kontakt">
+      <form action="https://api.web3forms.com/submit" method="POST" style="margin-top:1rem;">
+        <input type="hidden" name="access_key" value="66dbdf08-d264-427b-82e0-9ba0d7ea4d72">
+        <input type="hidden" name="subject" value="Neue Nachricht von rolfforster.github.io">
+        <input type="hidden" name="redirect" value="https://rolfforster.github.io/danke.html">
         <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
         <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
         <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
