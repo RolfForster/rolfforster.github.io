@@ -76,11 +76,19 @@
   /* HERO */
   .hero {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   .hero-bg {
     position: absolute;
@@ -361,7 +369,8 @@
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero { min-height: auto; }
     .hero-left { padding: 7rem 1.5rem 2rem; }
     .hero-right { padding: 2rem 1.5rem 4rem; }
     .cover-wrap img { width: 200px; }
@@ -384,20 +393,22 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-left">
-    <div class="hero-eyebrow">Roman · April 2026</div>
-    <h1>Schatten<br>krieg</h1>
-    <div class="hero-tagline">Schlachten enden. Der innere Krieg nicht.</div>
-    <div class="hero-meta">Psychologischer Kriegsroman</div>
-    <div>
-      <span class="btn-primary" style="opacity:0.4;cursor:default;">Erscheint April 2026</span>
-      <a href="#story" class="btn-secondary">Zur Story</a>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Roman · April 2026</div>
+      <h1>Schatten<br>krieg</h1>
+      <div class="hero-tagline">Schlachten enden. Der innere Krieg nicht.</div>
+      <div class="hero-meta">Psychologischer Kriegsroman</div>
+      <div>
+        <span class="btn-primary" style="opacity:0.4;cursor:default;">Erscheint April 2026</span>
+        <a href="#story" class="btn-secondary">Zur Story</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="cover-wrap">
-      <div class="cover-glow"></div>
-      <img src="schattenkrieg_mockup.png" alt="Schattenkrieg Mockup">
+    <div class="hero-right">
+      <div class="cover-wrap">
+        <div class="cover-glow"></div>
+        <img src="schattenkrieg_mockup.png" alt="Schattenkrieg Mockup">
+      </div>
     </div>
   </div>
 </section>
