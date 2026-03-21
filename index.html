@@ -316,9 +316,16 @@
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    transition: gap 0.3s;
+    border: 1px solid rgba(212,160,23,0.5);
+    padding: 0.6rem 1.4rem;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
   }
-  .book-link:hover { gap: 0.8rem; }
+  .book-link:hover {
+    gap: 0.8rem;
+    border-color: var(--accent-light);
+    background: rgba(212,160,23,0.08);
+  }
   .book-link::after { content: '→'; }
   .book-badge {
     display: inline-block;
@@ -600,7 +607,7 @@
         <div class="book-badge">Erschienen 2025</div>
         <div class="book-title">Reaper</div>
         <p class="book-desc">Sam Fletcher war dekorierter Soldat, Ehemann und Vater. Dann verlor er alles. Ein psychologischer Roman über Trauma, Schuld und Familie.</p>
-        <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="book-link">Jetzt bestellen</a>
+        <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="book-link">Auf Amazon bestellen</a>
       </div>
     </div>
 
@@ -612,7 +619,7 @@
         <div class="book-badge">Erscheint April 2026</div>
         <div class="book-title">Schattenkrieg</div>
         <p class="book-desc">Sam ist geflüchtet und kämpft nun in der Ukraine für Menschen, die er nicht kennt. Der Krieg geht weiter, innen und aussen. Und doch findet er Halt bei seinen Kameraden, einem Arzt, zwei Waisenkindern und seiner Hündin Jacky.</p>
-        <a href="/schattenkrieg.html" class="book-link">Erscheint April 2026</a>
+        <a href="/schattenkrieg.html" class="book-link">Mehr erfahren</a>
       </div>
     </div>
 
