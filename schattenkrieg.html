@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schattenkrieg – Rolf Forster</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0d1117;
@@ -54,8 +54,9 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Special Elite', serif;
-    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 0.3em;
     color: rgba(255,255,255,0.85);
     text-transform: uppercase;
@@ -65,8 +66,9 @@
   .nav-back {
     color: var(--text-dim);
     text-decoration: none;
-    font-family: 'Special Elite', serif;
-    font-size: 0.75rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     transition: color 0.3s;
@@ -208,15 +210,16 @@
 
   /* STORY */
   .story {
-    background: var(--bg2);
+    background: #f5f0e8;
     padding: 7rem 6rem;
   }
   .section-label {
-    font-family: 'Special Elite', serif;
-    font-size: 0.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 500;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #8b6914;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -226,7 +229,7 @@
     content: '';
     width: 60px;
     height: 1px;
-    background: var(--accent);
+    background: #8b6914;
   }
   .story-grid {
     display: grid;
@@ -237,24 +240,24 @@
   .story-text h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #e8dfd0;
+    color: #1a1a1a;
     margin-bottom: 1.5rem;
     line-height: 1.2;
   }
   .story-text p {
-    color: var(--text-dim);
+    color: #3a3530;
     margin-bottom: 1.2rem;
     font-size: 1.05rem;
   }
   .story-text p strong {
-    color: var(--text);
+    color: #1a1a1a;
   }
   .story-quote {
-    border-left: 2px solid var(--accent);
+    border-left: 2px solid #8b6914;
     padding-left: 1.5rem;
     margin: 2rem 0;
     font-style: italic;
-    color: var(--text);
+    color: #2a2520;
     font-size: 1.15rem;
   }
   .story-details {
@@ -263,25 +266,26 @@
     gap: 2rem;
   }
   .detail-item {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(139,105,20,0.2);
     padding-top: 1.5rem;
   }
   .detail-label {
-    font-family: 'Special Elite', serif;
-    font-size: 0.65rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 500;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #8b6914;
     margin-bottom: 0.4rem;
   }
   .detail-value {
-    color: var(--text);
+    color: #1a1a1a;
     font-size: 1rem;
   }
 
   /* CHARACTERS */
   .characters {
-    background: var(--bg);
+    background: #eee8db;
     padding: 7rem 6rem;
   }
   .chars-grid {
@@ -292,46 +296,50 @@
     margin-top: 1rem;
   }
   .char-card {
-    border: 1px solid var(--border);
+    border: 1px solid rgba(139,105,20,0.2);
     padding: 1.5rem;
-    background: var(--bg2);
-    transition: border-color 0.3s;
+    background: rgba(255,255,255,0.5);
+    transition: border-color 0.3s, background 0.3s;
   }
-  .char-card:hover { border-color: rgba(180,160,100,0.3); }
+  .char-card:hover {
+    border-color: rgba(139,105,20,0.4);
+    background: rgba(255,255,255,0.8);
+  }
   .char-name {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
-    color: #e8dfd0;
+    color: #1a1a1a;
     margin-bottom: 0.3rem;
   }
   .char-role {
-    font-family: 'Special Elite', serif;
-    font-size: 0.65rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #8b6914;
     margin-bottom: 0.8rem;
   }
   .char-desc {
-    color: var(--text-dim);
+    color: #3a3530;
     font-size: 0.95rem;
     line-height: 1.6;
   }
 
   /* CTA */
   .cta {
-    background: var(--bg2);
+    background: #f5f0e8;
     padding: 6rem;
     text-align: center;
   }
   .cta h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    color: #e8dfd0;
+    color: #1a1a1a;
     margin-bottom: 1rem;
   }
   .cta p {
-    color: var(--text-dim);
+    color: #3a3530;
     font-style: italic;
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
@@ -363,7 +371,17 @@
   .divider {
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    background: linear-gradient(90deg, transparent, rgba(139,105,20,0.2), transparent);
+  }
+  .divider-hero {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #0d1117, #f5f0e8);
+  }
+  .divider-footer {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #f5f0e8, #0d1117);
   }
 
   /* RESPONSIVE */
@@ -401,7 +419,7 @@
       <div class="hero-tagline">Schlachten enden. Der innere Krieg nicht.</div>
       <div class="hero-meta">Psychologischer Kriegsroman</div>
       <div>
-        <span class="btn-primary" style="opacity:0.4;cursor:default;">Erscheint April 2026</span>
+        <a href="https://www.amazon.de/dp/B0GV3LTFY2" target="_blank" class="btn-primary">Auf Amazon bestellen</a>
         <a href="#story" class="btn-secondary">Zur Story</a>
       </div>
     </div>
@@ -414,7 +432,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider-hero"></div>
 
 <!-- STORY -->
 <section class="story" id="story">
@@ -511,6 +529,8 @@
   <h2>Jetzt lesen</h2>
   <p>Schattenkrieg erscheint im April 2026 — erhältlich auf Amazon und über Tolino.</p>
 </section>
+
+<div class="divider-footer"></div>
 
 <!-- FOOTER -->
 <footer>

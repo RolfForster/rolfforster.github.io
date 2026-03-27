@@ -217,6 +217,16 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--border), transparent);
   }
+  .divider-light {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139,105,20,0.2), transparent);
+  }
+  .divider-hero {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, #13171f, #f5f0e8);
+  }
 
   /* SECTION */
   section {
@@ -670,7 +680,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider-hero"></div>
 
 <!-- BÜCHER -->
 <section id="buecher">
@@ -704,7 +714,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider-light"></div>
 
 <!-- ÜBER MICH -->
 <section id="ueber-mich">
@@ -726,7 +736,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider-light"></div>
 
 <!-- KONTAKT / SOCIAL -->
 <section id="kontakt">
@@ -762,14 +772,16 @@
         <input type="hidden" name="access_key" value="66dbdf08-d264-427b-82e0-9ba0d7ea4d72">
         <input type="hidden" name="subject" value="Neue Nachricht von rolfforster.github.io">
         <input type="hidden" name="redirect" value="https://rolfforster.github.io/danke.html">
-        <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
-        <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
-        <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
-        <button type="submit" style="width:100%;padding:0.8rem;background:var(--accent2);color:var(--text);border:none;font-family:'Special Elite',serif;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#a02020'" onmouseout="this.style.background='var(--accent2)'">Nachricht senden</button>
+        <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
+        <button type="submit" style="width:100%;padding:0.8rem;background:#8b1a1a;color:#f5f0e8;border:none;font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#a02020'" onmouseout="this.style.background='#8b1a1a'">Nachricht senden</button>
       </form>
     </div>
   </div>
 </section>
+
+<div style="width:100%;height:60px;background:linear-gradient(to bottom,#f5f0e8,#0d1117);"></div>
 
 <!-- FOOTER -->
 <footer>
