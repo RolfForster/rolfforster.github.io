@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rolf Forster - Autor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #13171f;
@@ -62,8 +62,9 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: 'Special Elite', serif;
-    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 0.3em;
     color: #ffffff;
     text-transform: uppercase;
@@ -78,8 +79,9 @@
   .nav-links a {
     color: rgba(255,255,255,0.85);
     text-decoration: none;
-    font-family: 'Special Elite', serif;
-    font-size: 0.8rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     transition: color 0.3s;
@@ -240,7 +242,38 @@
   }
 
   /* BOOKS */
-  #buecher { background: #1a2133; }
+  #buecher {
+    background: #f5f0e8;
+  }
+  #buecher .section-label {
+    color: #8b6914;
+  }
+  #buecher .section-label::after {
+    background: #8b6914;
+  }
+  #buecher .book-title {
+    color: #1a1a1a;
+  }
+  #buecher .book-desc {
+    color: #3a3530;
+  }
+  #buecher .book-year {
+    color: #8b6914;
+  }
+  #buecher .book-badge {
+    background: rgba(139,105,20,0.1);
+    border-color: rgba(139,105,20,0.35);
+    color: #7a5c10;
+  }
+  #buecher .book-link {
+    color: #7a5c10;
+    border-color: rgba(139,105,20,0.5);
+  }
+  #buecher .book-link:hover {
+    border-color: #8b6914;
+    background: rgba(139,105,20,0.08);
+    color: #5a4008;
+  }
   .books-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -342,9 +375,28 @@
 
   /* ÜBER MICH */
   #ueber-mich {
-    background: #1a2133;
+    background: #eee8db;
     position: relative;
     overflow: hidden;
+  }
+  #ueber-mich .section-label {
+    color: #8b6914;
+  }
+  #ueber-mich .section-label::after {
+    background: #8b6914;
+  }
+  #ueber-mich .about-content h2 {
+    color: #1a1a1a;
+  }
+  #ueber-mich .about-content p {
+    color: #3a3530;
+  }
+  #ueber-mich .about-content p strong {
+    color: #1a1a1a;
+  }
+  #ueber-mich .about-quote {
+    border-left-color: #8b6914;
+    color: #2a2520;
   }
   #ueber-mich::before {
     content: '"';
@@ -353,7 +405,7 @@
     top: 3rem;
     font-family: 'Playfair Display', serif;
     font-size: 20rem;
-    color: rgba(180,160,100,0.03);
+    color: rgba(139,105,20,0.05);
     line-height: 1;
     pointer-events: none;
   }
@@ -480,8 +532,33 @@
 
   /* SOCIAL */
   #kontakt {
-    background: #1a2133;
+    background: #f5f0e8;
     padding-bottom: 4rem;
+  }
+  #kontakt .section-label {
+    color: #8b6914;
+  }
+  #kontakt .section-label::after {
+    background: #8b6914;
+  }
+  #kontakt .contact-item h3 {
+    color: #1a1a1a;
+  }
+  #kontakt .contact-item p {
+    color: #3a3530;
+  }
+  #kontakt .social-link {
+    color: #3a3530;
+    border-color: rgba(139,105,20,0.25);
+  }
+  #kontakt .social-link:hover {
+    color: #1a1a1a;
+    border-color: rgba(139,105,20,0.5);
+    background: rgba(139,105,20,0.05);
+  }
+  #kontakt .social-icon {
+    background: rgba(139,105,20,0.1);
+    color: #7a5c10;
   }
   .contact-grid {
     display: grid;
