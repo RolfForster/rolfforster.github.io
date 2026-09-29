@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rolf Forster – Schweizer Autor psychologischer Romane. Aktuelle Bücher: Reaper und Schattenkrieg.">
+  <meta name="description" content="Rolf Forster – Schweizer Autor psychologischer Romane. Aktuelle Bücher: Reaper, Schattenkrieg und Feral.">
 
 <meta property="og:title" content="Rolf Forster – Autor psychologischer Romane">
 <meta property="og:description" content="Psychologische Romane aus der Schweiz. Lakonisch. Präzise. Ungeschönt.">
@@ -294,7 +294,7 @@
   .books-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 4rem 3rem;
     max-width: 1000px;
   }
   .book-card {
@@ -722,6 +722,18 @@
       </div>
     </div>
 
+    <div class="book-card" id="book3">
+      <div class="book-cover" style="padding:0;border:none;">
+        <img src="feral_cover.jpg" alt="Feral Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="book-info">
+        <div class="book-badge">Erschienen September 2026</div>
+        <div class="book-title">Feral</div>
+        <p class="book-desc">David und Emily fliehen vor einer Welt, die zusammenbricht, in eine abgelegene Jagdhütte in der kanadischen Wildnis. Doch was sie zurückgelassen haben, ist längst bei ihnen. Ein psychologischer Roman darüber, wie weit Liebe geht, wenn der Mensch dahinter langsam verschwindet.</p>
+        <a href="/feral.html" class="book-link">Mehr erfahren</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -775,7 +787,7 @@
       <div class="about-quote">
         „Im Zentrum stehen Menschen, die mit dem leben müssen, was sie nicht ändern können.“
       </div>
-      <p><strong>Reaper</strong> ist mein Debütroman — eine Geschichte über Trauma, Familie und die Suche nach einem Weg zurück ins Leben. Mit <strong>Schattenkrieg</strong> erschien im April 2026 mein zweiter Roman.</p>
+      <p><strong>Reaper</strong> ist mein Debütroman — eine Geschichte über Trauma, Familie und die Suche nach einem Weg zurück ins Leben. Mit <strong>Schattenkrieg</strong> erschien im April 2026 mein zweiter, mit <strong>Feral</strong> im September 2026 mein dritter Roman.</p>
       <p>Ich lebe in der Schweiz, in der Nähe von Luzern.</p>
     </div>
   </div>
@@ -877,4 +889,8 @@
 
   // Book cards staggered delay
   document.querySelectorAll('.book-card').forEach((card, i) => {
-    car
+    card.style.transitionDelay = `${i * 0.1}s`;
+  });
+</script>
+</body>
+</html>
