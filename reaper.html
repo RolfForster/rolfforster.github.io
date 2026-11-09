@@ -333,6 +333,23 @@
     line-height: 1.6;
   }
 
+  /* BUCHHANDEL */
+  .buchhandel {
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .buchhandel a {
+    color: var(--accent-light);
+    text-underline-offset: 3px;
+    padding: 0.3rem 0;
+    white-space: nowrap;
+  }
+  .buchhandel a:hover { color: var(--text); }
+  .cta .buchhandel { color: #3a3530; margin: 1.25rem 0 0; }
+  .cta .buchhandel a { color: #7a5c10; }
+  .cta .buchhandel a:hover { color: #1a1a1a; }
+
   /* STIMMEN */
   .stimmen-grid {
     display: grid;
@@ -461,8 +478,8 @@
       <div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
           <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="btn-primary" data-umami-event="Reaper Amazon">Auf Amazon bestellen</a>
-          <a href="https://mytolino.de/tolino-shops/" target="_blank" class="btn-primary" data-umami-event="Reaper Buchhandel">Im Buchhandel bestellen</a>
         </div>
+        <div class="buchhandel">Im Buchhandel: <a href="https://www.thalia.de/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Deutschland">Deutschland</a> · <a href="https://www.thalia.at/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Österreich">Österreich</a> · <a href="https://www.orellfuessli.ch/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Schweiz">Schweiz</a></div>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;">
           <a href="https://www.amazon.de/Reaper-psychologischer-Thriller-D%C3%A4monen-Familie-ebook/dp/B0G1NCB4SM?ref_=saga_ast_ss_dsk_dp&amp;th=1&amp;asin=B0G1NCB4SM&amp;revisionId=35e3da95&amp;format=3&amp;depth=1" target="_blank" class="btn-secondary" style="margin-left:0;" data-umami-event="Reaper Leseprobe">Leseprobe auf Amazon</a>
           <a href="#story" class="btn-secondary" style="margin-left:0;">Zur Story</a>
@@ -599,9 +616,9 @@
   <p>Reaper ist der erste Roman um Sam Fletcher.</p>
   <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
     <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="btn-primary" data-umami-event="Reaper Amazon">Auf Amazon bestellen</a>
-    <a href="https://mytolino.de/tolino-shops/" target="_blank" class="btn-primary" data-umami-event="Reaper Buchhandel">Im Buchhandel bestellen</a>
     <a href="https://www.amazon.de/Reaper-psychologischer-Thriller-D%C3%A4monen-Familie-ebook/dp/B0G1NCB4SM?ref_=saga_ast_ss_dsk_dp&amp;th=1&amp;asin=B0G1NCB4SM&amp;revisionId=35e3da95&amp;format=3&amp;depth=1" target="_blank" class="btn-secondary" style="margin-left:0;color:#7a5c10;border-color:rgba(139,105,20,0.5);" data-umami-event="Reaper Leseprobe">Leseprobe auf Amazon</a>
   </div>
+  <div class="buchhandel">Im Buchhandel: <a href="https://www.thalia.de/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Deutschland">Deutschland</a> · <a href="https://www.thalia.at/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Österreich">Österreich</a> · <a href="https://www.orellfuessli.ch/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Schweiz">Schweiz</a></div>
 </section>
 
 <div class="divider-footer"></div>
