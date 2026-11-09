@@ -377,6 +377,26 @@
     background: rgba(212,160,23,0.08);
   }
   .book-link::after { content: '→'; }
+  .book-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .book-actions .book-link { margin-top: 0; }
+  .book-actions .btn-primary {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.75rem;
+  }
+  .book-cover::before { pointer-events: none; }
+  .book-cover-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+  }
+  .book-cover-link:hover { opacity: 0.85; }
   .book-badge {
     display: inline-block;
     padding: 0.2rem 0.8rem;
@@ -658,6 +678,13 @@
     .hero { padding: 7rem 1.5rem 4rem; }
     .hero h1 { font-size: 3.5rem; }
     .books-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .book-actions a {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      padding: 0.6rem 0.8rem;
+      letter-spacing: 0.12em;
+    }
     .about-grid { grid-template-columns: 1fr; gap: 3rem; }
     .contact-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
@@ -700,37 +727,46 @@
 
     <div class="book-card" id="book3">
       <div class="book-cover" style="padding:0;border:none;">
-        <img src="feral_cover.jpg" alt="Feral Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <a href="/feral.html" class="book-cover-link"><img src="feral_cover.jpg" alt="Feral Cover" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
       </div>
       <div class="book-info">
         <div class="book-badge">Neu erschienen · September 2026</div>
         <div class="book-title">Feral</div>
         <p class="book-desc">David und Emily fliehen vor einer Welt, die zusammenbricht, in eine abgelegene Jagdhütte in der kanadischen Wildnis. Doch was sie zurückgelassen haben, ist längst bei ihnen. Ein psychologischer Roman darüber, wie weit Liebe geht, wenn der Mensch dahinter langsam verschwindet.</p>
-        <a href="/feral.html" class="book-link">Mehr erfahren</a>
+        <div class="book-actions">
+          <a href="https://www.amazon.de/dp/B0HK8B99YL" target="_blank" class="btn-primary" data-umami-event="Startseite Feral Amazon">Auf Amazon bestellen</a>
+          <a href="/feral.html" class="book-link">Mehr erfahren</a>
+        </div>
       </div>
     </div>
 
     <div class="book-card" id="book2">
       <div class="book-cover" style="padding:0;border:none;">
-        <img src="schattenkrieg_cover.jpg" alt="Schattenkrieg Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <a href="/schattenkrieg.html" class="book-cover-link"><img src="schattenkrieg_cover.jpg" alt="Schattenkrieg Cover" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
       </div>
       <div class="book-info">
         <div class="book-badge">Erschienen April 2026</div>
         <div class="book-title">Schattenkrieg</div>
         <p class="book-desc">Sam ist geflüchtet und kämpft nun in der Ukraine für Menschen, die er nicht kennt. Der Krieg geht weiter, innen und aussen. Und doch findet er Halt bei seinen Kameraden, einem Arzt, zwei Waisenkindern und seiner Hündin Jacky.</p>
-        <a href="/schattenkrieg.html" class="book-link">Mehr erfahren</a>
+        <div class="book-actions">
+          <a href="https://www.amazon.de/dp/B0GV3LTFY2" target="_blank" class="btn-primary" data-umami-event="Startseite Schattenkrieg Amazon">Auf Amazon bestellen</a>
+          <a href="/schattenkrieg.html" class="book-link">Mehr erfahren</a>
+        </div>
       </div>
     </div>
 
     <div class="book-card" id="book1">
       <div class="book-cover" style="padding:0;border:none;">
-        <img src="reaper_cover.jpg" alt="Reaper Cover" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <a href="/reaper.html" class="book-cover-link"><img src="reaper_cover.jpg" alt="Reaper Cover" style="width:100%;height:100%;object-fit:cover;display:block;"></a>
       </div>
       <div class="book-info">
         <div class="book-badge">Erschienen November 2025</div>
         <div class="book-title">Reaper</div>
         <p class="book-desc">Sam Fletcher war dekorierter Soldat, Ehemann und Vater. Dann verlor er alles. Ein psychologischer Roman über Trauma, Schuld und Familie.</p>
-        <a href="/reaper.html" class="book-link">Mehr erfahren</a>
+        <div class="book-actions">
+          <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="btn-primary" data-umami-event="Startseite Reaper Amazon">Auf Amazon bestellen</a>
+          <a href="/reaper.html" class="book-link">Mehr erfahren</a>
+        </div>
       </div>
     </div>
 
