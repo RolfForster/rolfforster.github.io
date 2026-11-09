@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reaper – Rolf Forster</title>
+<meta name="description" content="Reaper, psychologischer Roman von Rolf Forster. Über einen Mann, der sich selbst nicht entkommen kann, und eine Familie, die ihn nicht aufgibt.">
+<meta property="og:title" content="Reaper – Rolf Forster">
+<meta property="og:description" content="Er weiss, dass er falsch liegt. Und kann nicht aufhören.">
+<meta property="og:url" content="https://rolfforster.ch/reaper.html">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://rolfforster.ch/reaper_cover.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -327,6 +333,33 @@
     line-height: 1.6;
   }
 
+  /* STIMMEN */
+  .stimmen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
+    gap: 1.5rem;
+  }
+  .stimme {
+    border: 1px solid rgba(139,105,20,0.25);
+    background: rgba(255,255,255,0.5);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stimme-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+  .stimme-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #3a3530;
+  }
+
   /* CTA */
   .cta {
     background: #f5f0e8;
@@ -541,6 +574,19 @@
       <div class="char-name">Aaron</div>
       <div class="char-role">Sams Vater</div>
       <div class="char-desc">War früher selbst Soldat. Ein harter, verbitterter Mann — und vielleicht eine Erklärung für das, was Sam geworden ist.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STIMMEN -->
+<section class="story" id="stimmen">
+  <div class="section-label">Stimmen zum Buch</div>
+  <div class="stimmen-grid">
+    <div class="stimme">
+      <div class="stimme-text">„Es war nicht leicht, es zu lesen. Aber es hat mir eine Welt gezeigt, die ich so nie gesehen hätte.“</div>
+      <div class="stimme-name">@aldonagz3</div>
     </div>
   </div>
 </section>

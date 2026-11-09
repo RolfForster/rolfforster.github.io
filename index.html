@@ -350,6 +350,14 @@
     color: #e8dfd0;
     margin-bottom: 1rem;
   }
+  .book-series {
+    font-family: 'Special Elite', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7a5c10;
+    margin: -0.6rem 0 1rem;
+  }
   .book-desc {
     color: #c0b8a8;
     font-size: 0.95rem;
@@ -678,6 +686,7 @@
     .hero { padding: 7rem 1.5rem 4rem; }
     .hero h1 { font-size: 3.5rem; }
     .books-grid { grid-template-columns: 1fr; gap: 3rem; }
+    #rezensionen { padding: 4rem 1.5rem !important; }
     .book-actions a {
       width: 100%;
       justify-content: center;
@@ -714,6 +723,7 @@
   <div class="hero-content">
   <h1>Manche Wunden<br>sieht man <em>nicht.</em></h1>
   <p style="font-family: 'Crimson Text', Georgia, serif; font-size: 1.2rem; color: #c8bfb0; letter-spacing: 0.05em; margin-top: 0.75rem;">Psychologische Romane von Rolf Forster</p>
+  <div class="hero-cta" style="margin-top:2rem;"><a href="#buecher" class="btn-primary">Zu den Büchern</a></div>
 
   </div>
 </section>
@@ -747,6 +757,7 @@
       <div class="book-info">
         <div class="book-badge">Erschienen April 2026</div>
         <div class="book-title">Schattenkrieg</div>
+        <div class="book-series">Sam Fletcher · Band 2</div>
         <p class="book-desc">Sam ist geflüchtet und kämpft nun in der Ukraine für Menschen, die er nicht kennt. Der Krieg geht weiter, innen und aussen. Und doch findet er Halt bei seinen Kameraden, einem Arzt, zwei Waisenkindern und seiner Hündin Jacky.</p>
         <div class="book-actions">
           <a href="https://www.amazon.de/dp/B0GV3LTFY2" target="_blank" class="btn-primary" data-umami-event="Startseite Schattenkrieg Amazon">Auf Amazon bestellen</a>
@@ -762,6 +773,7 @@
       <div class="book-info">
         <div class="book-badge">Erschienen November 2025</div>
         <div class="book-title">Reaper</div>
+        <div class="book-series">Sam Fletcher · Band 1</div>
         <p class="book-desc">Sam Fletcher war dekorierter Soldat, Ehemann und Vater. Dann verlor er alles. Ein psychologischer Roman über Trauma, Schuld und Familie.</p>
         <div class="book-actions">
           <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="btn-primary" data-umami-event="Startseite Reaper Amazon">Auf Amazon bestellen</a>
@@ -779,6 +791,14 @@
 <section id="rezensionen" style="padding: 4rem 6rem;">
   <div class="section-label">Stimmen zum Buch</div>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+    <div style="border: 1px solid var(--border); padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem;">
+      <div style="font-family: 'Crimson Text', Georgia, serif; font-style: italic; font-size: 1.1rem; line-height: 1.7; color: var(--text);">„Das Ende? Das habe ich so nicht kommen sehen und es hat mich erschüttert […] aber es lässt manches im Unklaren, lässt mich hoffen. Eine klare Leseempfehlung von mir!“</div>
+      <div>
+        <div style="font-family: 'Special Elite', serif; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-dim);">Petra Spiegel</div>
+        <div style="font-family: 'Special Elite', serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-top: 0.2rem;">Feral</div>
+      </div>
+    </div>
 
     <div style="border: 1px solid var(--border); padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem;">
       <div style="font-family: 'Crimson Text', Georgia, serif; font-style: italic; font-size: 1.1rem; line-height: 1.7; color: var(--text);">„Es war nicht leicht, es zu lesen. Aber es hat mir eine Welt gezeigt, die ich so nie gesehen hätte.“</div>

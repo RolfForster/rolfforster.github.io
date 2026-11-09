@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Feral – Rolf Forster</title>
+<meta name="description" content="Feral, psychologischer Spannungsroman von Rolf Forster. David und Emily fliehen in eine abgelegene Jagdhütte in der kanadischen Wildnis. Wie weit geht Liebe, wenn der Mensch dahinter langsam verschwindet?">
+<meta property="og:title" content="Feral – Rolf Forster">
+<meta property="og:description" content="Wie weit geht Liebe, wenn der Mensch dahinter langsam verschwindet?">
+<meta property="og:url" content="https://rolfforster.ch/feral.html">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://rolfforster.ch/feral_cover.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -327,6 +333,33 @@
     line-height: 1.6;
   }
 
+  /* STIMMEN */
+  .stimmen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
+    gap: 1.5rem;
+  }
+  .stimme {
+    border: 1px solid rgba(139,105,20,0.25);
+    background: rgba(255,255,255,0.5);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stimme-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+  .stimme-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #3a3530;
+  }
+
   /* CTA */
   .cta {
     background: #f5f0e8;
@@ -499,6 +532,23 @@
       <div class="char-name">Roy</div>
       <div class="char-role">Nachbar</div>
       <div class="char-desc">Ein Spiegel für Davids eigene Entscheidungen — und eine Ahnung davon, wohin der Weg führen könnte.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STIMMEN -->
+<section class="story" id="stimmen">
+  <div class="section-label">Stimmen zum Buch</div>
+  <div class="stimmen-grid">
+    <div class="stimme">
+      <div class="stimme-text">„Wer gerne abseits des Mainstreams liest, ist hier richtig. Hier geht es vordergründig nicht um Handlungen und Aktionen, sondern rein in die Psyche.“</div>
+      <div class="stimme-name">@ursulainamaka</div>
+    </div>
+    <div class="stimme">
+      <div class="stimme-text">„Das Ende? Das habe ich so nicht kommen sehen und es hat mich erschüttert […] aber es lässt manches im Unklaren, lässt mich hoffen. Eine klare Leseempfehlung von mir!“</div>
+      <div class="stimme-name">Petra Spiegel</div>
     </div>
   </div>
 </section>

@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schattenkrieg – Rolf Forster</title>
+<meta name="description" content="Schattenkrieg, psychologischer Kriegsroman von Rolf Forster. Sam Fletcher kämpft in der Ukraine, bis ihn einholt, was er verdrängt hat. Schlachten enden. Der innere Krieg nicht.">
+<meta property="og:title" content="Schattenkrieg – Rolf Forster">
+<meta property="og:description" content="Schlachten enden. Der innere Krieg nicht.">
+<meta property="og:url" content="https://rolfforster.ch/schattenkrieg.html">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://rolfforster.ch/schattenkrieg_cover.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -327,6 +333,33 @@
     line-height: 1.6;
   }
 
+  /* STIMMEN */
+  .stimmen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 420px));
+    gap: 1.5rem;
+  }
+  .stimme {
+    border: 1px solid rgba(139,105,20,0.25);
+    background: rgba(255,255,255,0.5);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .stimme-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+  .stimme-name {
+    font-family: 'Special Elite', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #3a3530;
+  }
+
   /* CTA */
   .cta {
     background: #f5f0e8;
@@ -477,7 +510,7 @@
       </div>
       <div class="detail-item">
         <div class="detail-label">Auch erhältlich</div>
-        <div class="detail-value"><a href="https://www.amazon.de/dp/B0G1NCB4SM" style="color:var(--accent-light);text-decoration:none;" data-umami-event="Schattenkrieg Reaper Amazon">Reaper →</a></div>
+        <div class="detail-value"><a href="/reaper.html" style="color:var(--accent-light);text-decoration:none;">Reaper →</a></div>
       </div>
     </div>
   </div>
@@ -528,6 +561,23 @@
       <div class="char-name">Jacky</div>
       <div class="char-role">Sams Hündin</div>
       <div class="char-desc">Die Schäferhündin war alleine unterwegs, als Sam auf sie traf.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STIMMEN -->
+<section class="story" id="stimmen">
+  <div class="section-label">Stimmen zum Buch</div>
+  <div class="stimmen-grid">
+    <div class="stimme">
+      <div class="stimme-text">„Das Buch hat das, was eine gute Geschichte ausmacht. Ein Setting, das so beschrieben wird, dass ich es vor mir sehe. […]“</div>
+      <div class="stimme-name">@ursulainamaka</div>
+    </div>
+    <div class="stimme">
+      <div class="stimme-text">„Die Atmosphäre der Geschichte hüllt den Leser direkt von Seite 1 an ein, so dass man mittendrin im Geschehen ist. […]“</div>
+      <div class="stimme-name">@carmen_red_lebt_und_liest</div>
     </div>
   </div>
 </section>
