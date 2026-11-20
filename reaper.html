@@ -17,10 +17,10 @@
     --bg2: #1a1510;
     --text: #f0e8d8;
     --text-dim: #b5aa9a;
-    --accent: #b8860b;
+    --accent: #b8ad9e;
     --accent2: #8b1a1a;
-    --accent-light: #d4a017;
-    --border: rgba(180,160,100,0.15);
+    --accent-light: #d6cbb9;
+    --border: rgba(184,173,158,0.2);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -191,7 +191,7 @@
   }
   .btn-secondary:hover {
     color: var(--text);
-    border-color: rgba(180,160,100,0.4);
+    border-color: rgba(184,173,158,0.4);
   }
   .hero-right {
     position: relative;
@@ -226,7 +226,7 @@
     font-weight: 500;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: #8b6914;
+    color: #6b5f52;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -236,7 +236,7 @@
     content: '';
     width: 60px;
     height: 1px;
-    background: #8b6914;
+    background: #6b5f52;
   }
   .story-grid {
     display: grid;
@@ -260,7 +260,7 @@
     color: #1a1a1a;
   }
   .story-quote {
-    border-left: 2px solid #8b6914;
+    border-left: 2px solid #6b5f52;
     padding-left: 1.5rem;
     margin: 2rem 0;
     font-style: italic;
@@ -273,7 +273,7 @@
     gap: 2rem;
   }
   .detail-item {
-    border-top: 1px solid rgba(139,105,20,0.2);
+    border-top: 1px solid rgba(107,95,82,0.2);
     padding-top: 1.5rem;
   }
   .detail-label {
@@ -282,7 +282,7 @@
     font-weight: 500;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #8b6914;
+    color: #6b5f52;
     margin-bottom: 0.4rem;
   }
   .detail-value {
@@ -292,7 +292,7 @@
 
   /* CHARACTERS */
   .characters {
-    background: #eee8db;
+    background: #d9d0c3;
     padding: 7rem 6rem;
   }
   .chars-grid {
@@ -303,13 +303,13 @@
     margin-top: 1rem;
   }
   .char-card {
-    border: 1px solid rgba(139,105,20,0.2);
+    border: 1px solid rgba(107,95,82,0.2);
     padding: 1.5rem;
     background: rgba(255,255,255,0.5);
     transition: border-color 0.3s, background 0.3s;
   }
   .char-card:hover {
-    border-color: rgba(139,105,20,0.4);
+    border-color: rgba(107,95,82,0.4);
     background: rgba(255,255,255,0.8);
   }
   .char-name {
@@ -324,9 +324,11 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #8b6914;
+    color: #6b5f52;
     margin-bottom: 0.8rem;
   }
+  .characters .section-label { color: #4a4036; }
+  .characters .section-label::after { background: #4a4036; }
   .char-desc {
     color: #3a3530;
     font-size: 0.95rem;
@@ -347,7 +349,7 @@
   }
   .buchhandel a:hover { color: var(--text); }
   .cta .buchhandel { color: #3a3530; margin: 1.25rem 0 0; }
-  .cta .buchhandel a { color: #7a5c10; }
+  .cta .buchhandel a { color: #5f5448; }
   .cta .buchhandel a:hover { color: #1a1a1a; }
 
   /* STIMMEN */
@@ -357,7 +359,7 @@
     gap: 1.5rem;
   }
   .stimme {
-    border: 1px solid rgba(139,105,20,0.25);
+    border: 1px solid rgba(107,95,82,0.25);
     background: rgba(255,255,255,0.5);
     padding: 1.75rem;
     display: flex;
@@ -422,7 +424,7 @@
   .divider {
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139,105,20,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(107,95,82,0.2), transparent);
   }
   .divider-hero {
     width: 100%;
@@ -530,7 +532,7 @@
       </div>
       <div class="detail-item">
         <div class="detail-label">Fortsetzung</div>
-        <div class="detail-value"><a href="/schattenkrieg.html" style="color:var(--accent-light);text-decoration:none;">Schattenkrieg →</a></div>
+        <div class="detail-value"><a href="/schattenkrieg.html" style="color:#5f5448;text-decoration:underline;text-underline-offset:3px;">Schattenkrieg →</a></div>
       </div>
     </div>
   </div>
@@ -616,7 +618,7 @@
   <p>Reaper ist der erste Roman um Sam Fletcher.</p>
   <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
     <a href="https://www.amazon.de/dp/B0G1NCB4SM" target="_blank" class="btn-primary" data-umami-event="Reaper Amazon">Auf Amazon bestellen</a>
-    <a href="https://www.amazon.de/Reaper-psychologischer-Thriller-D%C3%A4monen-Familie-ebook/dp/B0G1NCB4SM?ref_=saga_ast_ss_dsk_dp&amp;th=1&amp;asin=B0G1NCB4SM&amp;revisionId=35e3da95&amp;format=3&amp;depth=1" target="_blank" class="btn-secondary" style="margin-left:0;color:#7a5c10;border-color:rgba(139,105,20,0.5);" data-umami-event="Reaper Leseprobe">Leseprobe auf Amazon</a>
+    <a href="https://www.amazon.de/Reaper-psychologischer-Thriller-D%C3%A4monen-Familie-ebook/dp/B0G1NCB4SM?ref_=saga_ast_ss_dsk_dp&amp;th=1&amp;asin=B0G1NCB4SM&amp;revisionId=35e3da95&amp;format=3&amp;depth=1" target="_blank" class="btn-secondary" style="margin-left:0;color:#5f5448;border-color:rgba(107,95,82,0.5);" data-umami-event="Reaper Leseprobe">Leseprobe auf Amazon</a>
   </div>
   <div class="buchhandel">Im Buchhandel: <a href="https://www.thalia.de/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Deutschland">Deutschland</a> · <a href="https://www.thalia.at/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Österreich">Österreich</a> · <a href="https://www.orellfuessli.ch/shop/home/artikeldetails/A1077679992" target="_blank" data-umami-event="Reaper Buchhandel Schweiz">Schweiz</a></div>
 </section>
@@ -625,7 +627,10 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Rolf Forster</p>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div style="width:38px;height:38px;border:1px solid rgba(184,173,158,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:0.85rem;color:var(--accent-light);">RF</div>
+    <p>© 2026 Rolf Forster</p>
+  </div>
   <p><a href="/">rolfforster.ch</a> · <a href="/impressum.html">Impressum</a></p>
 </footer>
 

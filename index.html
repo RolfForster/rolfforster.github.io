@@ -23,11 +23,11 @@
     --bg3: #222b3e;
     --text: #f0e8d8;
     --text-dim: #b5aa9a;
-    --accent: #b8860b;
+    --accent: #b8ad9e;
     --accent2: #8b1a1a;
-    --accent-light: #d4a017;
-    --border: rgba(180,160,100,0.15);
-    --glow: rgba(184,134,11,0.08);
+    --accent-light: #d6cbb9;
+    --border: rgba(184,173,158,0.2);
+    --glow: rgba(184,173,158,0.08);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -120,8 +120,8 @@
     position: absolute;
     inset: 0;
     background-image: 
-      linear-gradient(rgba(180,160,100,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(180,160,100,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(184,173,158,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,173,158,0.03) 1px, transparent 1px);
     background-size: 80px 80px;
   }
   .hero-content {
@@ -161,7 +161,7 @@
   }
   .hero h1 em {
     font-style: italic;
-    color: var(--accent-light);
+    color: var(--accent);
   }
   .hero-sub {
     font-size: 1.2rem;
@@ -217,8 +217,8 @@
   }
   .btn-secondary:hover {
     color: var(--text);
-    border-color: rgba(180,160,100,0.4);
-    background: rgba(180,160,100,0.05);
+    border-color: rgba(184,173,158,0.4);
+    background: rgba(184,173,158,0.05);
   }
 
   /* DIVIDER */
@@ -230,7 +230,7 @@
   .divider-light {
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139,105,20,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(107,95,82,0.2), transparent);
   }
   .divider-hero {
     width: 100%;
@@ -266,10 +266,10 @@
     background: #f5f0e8;
   }
   #buecher .section-label {
-    color: #8b6914;
+    color: #6b5f52;
   }
   #buecher .section-label::after {
-    background: #8b6914;
+    background: #6b5f52;
   }
   #buecher .book-title {
     color: #1a1a1a;
@@ -278,21 +278,21 @@
     color: #3a3530;
   }
   #buecher .book-year {
-    color: #8b6914;
+    color: #6b5f52;
   }
   #buecher .book-badge {
-    background: rgba(139,105,20,0.1);
-    border-color: rgba(139,105,20,0.35);
-    color: #7a5c10;
+    background: rgba(107,95,82,0.1);
+    border-color: rgba(107,95,82,0.35);
+    color: #5f5448;
   }
   #buecher .book-link {
-    color: #7a5c10;
-    border-color: rgba(139,105,20,0.5);
+    color: #5f5448;
+    border-color: rgba(107,95,82,0.5);
   }
   #buecher .book-link:hover {
-    border-color: #8b6914;
-    background: rgba(139,105,20,0.08);
-    color: #5a4008;
+    border-color: #6b5f52;
+    background: rgba(107,95,82,0.08);
+    color: #3e372f;
   }
   .books-grid {
     display: grid;
@@ -324,7 +324,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(139,26,26,0.3), rgba(184,134,11,0.1), transparent);
+    background: linear-gradient(135deg, rgba(139,26,26,0.3), rgba(184,173,158,0.1), transparent);
   }
   .book-cover-text {
     font-family: 'Playfair Display', serif;
@@ -369,7 +369,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    border: 1px solid rgba(212,160,23,0.5);
+    border: 1px solid rgba(214,203,185,0.5);
     padding: 0.6rem 1.4rem;
     transition: all 0.3s;
     margin-top: 0.5rem;
@@ -377,14 +377,14 @@
   .book-link:hover {
     gap: 0.8rem;
     border-color: var(--accent-light);
-    background: rgba(212,160,23,0.08);
+    background: rgba(214,203,185,0.08);
   }
   .book-link::after { content: '→'; }
   .book-badge {
     display: inline-block;
     padding: 0.2rem 0.8rem;
-    background: rgba(184,134,11,0.1);
-    border: 1px solid rgba(184,134,11,0.3);
+    background: rgba(184,173,158,0.1);
+    border: 1px solid rgba(184,173,158,0.3);
     color: var(--accent-light);
     font-family: 'Special Elite', serif;
     font-size: 0.65rem;
@@ -395,15 +395,15 @@
 
   /* ÜBER MICH */
   #ueber-mich {
-    background: #eee8db;
+    background: #d9d0c3;
     position: relative;
     overflow: hidden;
   }
   #ueber-mich .section-label {
-    color: #8b6914;
+    color: #4a4036;
   }
   #ueber-mich .section-label::after {
-    background: #8b6914;
+    background: #4a4036;
   }
   #ueber-mich .about-content h2 {
     color: #1a1a1a;
@@ -415,7 +415,7 @@
     color: #1a1a1a;
   }
   #ueber-mich .about-quote {
-    border-left-color: #8b6914;
+    border-left-color: #6b5f52;
     color: #2a2520;
   }
   #ueber-mich::before {
@@ -425,7 +425,7 @@
     top: 3rem;
     font-family: 'Playfair Display', serif;
     font-size: 20rem;
-    color: rgba(139,105,20,0.05);
+    color: rgba(107,95,82,0.05);
     line-height: 1;
     pointer-events: none;
   }
@@ -534,7 +534,7 @@
     transition: border-color 0.3s;
   }
   .newsletter-form input::placeholder { color: var(--text-dim); }
-  .newsletter-form input:focus { border-color: rgba(180,160,100,0.4); }
+  .newsletter-form input:focus { border-color: rgba(184,173,158,0.4); }
   .newsletter-form button {
     padding: 0.9rem 1.8rem;
     background: var(--accent2);
@@ -556,10 +556,10 @@
     padding-bottom: 4rem;
   }
   #kontakt .section-label {
-    color: #8b6914;
+    color: #6b5f52;
   }
   #kontakt .section-label::after {
-    background: #8b6914;
+    background: #6b5f52;
   }
   #kontakt .contact-item h3 {
     color: #1a1a1a;
@@ -569,16 +569,16 @@
   }
   #kontakt .social-link {
     color: #3a3530;
-    border-color: rgba(139,105,20,0.25);
+    border-color: rgba(107,95,82,0.25);
   }
   #kontakt .social-link:hover {
     color: #1a1a1a;
-    border-color: rgba(139,105,20,0.5);
-    background: rgba(139,105,20,0.05);
+    border-color: rgba(107,95,82,0.5);
+    background: rgba(107,95,82,0.05);
   }
   #kontakt .social-icon {
-    background: rgba(139,105,20,0.1);
-    color: #7a5c10;
+    background: rgba(107,95,82,0.1);
+    color: #5f5448;
   }
   .contact-grid {
     display: grid;
@@ -614,8 +614,8 @@
   }
   .social-link:hover {
     color: var(--text);
-    border-color: rgba(180,160,100,0.3);
-    background: rgba(180,160,100,0.04);
+    border-color: rgba(184,173,158,0.3);
+    background: rgba(184,173,158,0.04);
     transform: translateX(4px);
   }
   .social-icon {
@@ -852,9 +852,9 @@
         <input type="hidden" name="access_key" value="66dbdf08-d264-427b-82e0-9ba0d7ea4d72">
         <input type="hidden" name="subject" value="Neue Nachricht von rolfforster.github.io">
         <input type="hidden" name="redirect" value="https://rolfforster.github.io/danke.html">
-        <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
-        <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
-        <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(139,105,20,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
+        <input type="text" name="name" placeholder="Dein Name" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(107,95,82,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <input type="email" name="email" placeholder="Deine E-Mail" required style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(107,95,82,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;">
+        <textarea name="nachricht" placeholder="Deine Nachricht" required rows="4" style="width:100%;padding:0.7rem 1rem;background:#fff;border:1px solid rgba(107,95,82,0.3);color:#1a1a1a;font-family:'Crimson Text',serif;font-size:1rem;outline:none;margin-bottom:0.7rem;box-sizing:border-box;resize:vertical;"></textarea>
         <button type="submit" style="width:100%;padding:0.8rem;background:#8b1a1a;color:#f5f0e8;border:none;font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#a02020'" onmouseout="this.style.background='#8b1a1a'">Nachricht senden</button>
       </form>
     </div>
@@ -865,7 +865,10 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Rolf Forster — Alle Rechte vorbehalten</p>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div style="width:38px;height:38px;border:1px solid rgba(184,173,158,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:0.85rem;color:var(--accent-light);">RF</div>
+    <p>© 2026 Rolf Forster — Alle Rechte vorbehalten</p>
+  </div>
   <p><a href="/impressum.html" style="color:var(--text-dim);text-decoration:none;font-family:'Special Elite',serif;font-size:0.75rem;letter-spacing:0.1em;">Impressum</a></p>
 
 </footer>
